@@ -79,7 +79,7 @@ plt.legend();
 ```
 
 
-![png](output_5_0.png)
+![png](images/output_5_0.png)
 
 
 **Fig:** the effect is assumed to have a negative impact on the sales of the control group and a positive impact on the treatment gruop. Only looking at the treatment group will not immediately tell us that there is a significant positive effect, because the actual sales went down after the time of the treatment.
@@ -101,7 +101,7 @@ ax[1].bar(['true', 'random'], avg_effects, width=0.3, color=['C0', 'C2']);
 ```
 
 
-![png](output_7_0.png)
+![png](images/output_7_0.png)
 
 
 **Fig:** as we can see, the true effect is consistently overestimated by about 50% if we used an traditional A/B testing framework.
@@ -136,7 +136,7 @@ sns.distplot(pred.iloc[-N:] - y.iloc[-N:], bins=8, kde=True, ax=ax[1], color='gr
 ```
 
 
-![png](output_9_0.png)
+![png](images/output_9_0.png)
 
 
 **Fig:** using pre-treatment data, we can construct a model to estimate the sales KPI using the sales of other items at Wal-mart. Hypothetical post-treatment data should not be included in the training set since they cannot be observed, although using future exogenous data to retroactively predict sales KPI is fair game. Visually, the model has a decent in-sample fit so we shall proceed.
@@ -165,7 +165,7 @@ plt.legend();
 ```
 
 
-![png](output_11_0.png)
+![png](images/output_11_0.png)
 
 
 **Fig:** Here, the actual observations are replaced by the estimated sales KPI, our synthetic control.
@@ -188,7 +188,7 @@ ax[1].bar(['true', 'synthetic', 'random'], avg_effects, width=0.3, color=['C0', 
 ```
 
 
-![png](output_13_0.png)
+![png](images/output_13_0.png)
 
 
 **Fig:** while the synthetic control seems to have high variance as expected, it seems to provide a much closer estimate of the treatment effect over ~50 time periods. The quality of the synthetic control relies on having an unbiased predictive model that has low variance. This is not always achievable but it seemed to have work out in this case.
@@ -204,5 +204,5 @@ plt.title('KDE of estimated effects');
 ```
 
 
-![png](output_15_0.png)
+![png](images/output_15_0.png)
 
