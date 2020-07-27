@@ -1,4 +1,4 @@
-# synthetic-control-project
+# Synthetic Control Project
 
 Synthetic control is an application of predictive modeling in causal inference. When the outcome of the control group is dependent on the outcome of the treatment group, the treatment effect cannot be accurately estimate. This is where predictive modeling can help to construct a synthetic treatment group where the outcome is entirely predicted and not observed.
 
